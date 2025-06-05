@@ -251,7 +251,7 @@ function render_generator_form(
                         <input type="checkbox" id="force_new_key" name="force_new_key" value="true"
                                class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
                         <label for="force_new_key" class="ml-2 block text-sm text-gray-900">
-                            Generate a **new** private key (will overwrite existing for this CN)
+                            Generate a <strong>new</strong> private key (will overwrite existing for this CN)
                         </label>
                     </div>
                 <?php endif; ?>
@@ -395,7 +395,7 @@ function render_generator_form(
                                 class="bg-indigo-600 text-white px-6 py-2.5 rounded-lg
                                        hover:bg-indigo-700 transition duration-300 ease-in-out
                                        shadow-md font-semibold text-lg">
-                            Done (Back to Start)
+                            Done
                         </button>
                     </form>
                 <?php endif; ?>
@@ -414,7 +414,7 @@ function render_footer(): void
 {
     ?>
     <footer class="mt-12 py-6 text-center text-sm text-gray-500">
-        &copy; 2025 by eliasthecactus. All rights reserved.
+        &copy; 2025 by <a href="https://github.com/eliasthecactus"><strong>eliasthecactus</strong></a>. All rights reserved.
     </footer>
     <?php
 }

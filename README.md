@@ -6,6 +6,7 @@ Certer is a web-based application designed to streamline the process of generati
 - [x] Generate CSR
 - [x] Use existing key
 - [ ] Integrate LDAP Auth
+- [ ] Download on success
 
 
 ## Installation
