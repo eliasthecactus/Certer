@@ -12,6 +12,7 @@ Certer is a web-based application designed to streamline the process of generati
 You can install put the files directly onto your webserver. I use docker.
 
 ```bash
+mv docker-compose.sample.yml docker-compose.yml
 docker compose up -d
 ```
 

@@ -1,0 +1,28 @@
+services:
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./public:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./certdir:/certdir
+    depends_on:
+      - php
+
+  php:
+    image: php:8.2-fpm-alpine
+    volumes:
+      - ./public:/var/www/html
+    environment:
+      - AUTH_USERNAME=admin
+      - AUTH_PASSWORD=password
+      - CA_FQDN=your-server.domain.ch
+      - CA_USERNAME=username
+      - CA_PASSWORD=password
+      - CA_TEMPLATE_NAME=YourTemplate
+      - DEFAULT_ORG=Sensee
+      - DEFAULT_OU=IT
+      - DEFAULT_CITY=Bern
+      - DEFAULT_STATE=BE
+      - DEFAULT_COUNTRY=CH
